@@ -7,4 +7,5 @@ export class User {
   address: string = '';
   active: boolean = false;
   accessToken?: string;
+  role?: number = 0;
 }

@@ -15,8 +15,12 @@
             </td>
             <td>
               <div class="btn-group">
-                <button class="btn btn-info">u</button>
-                <button (click)="onDelete(user)" class="btn btn-danger">d</button>
+                <button [routerLink]="['/user-editor', user.id]" class="btn btn-info">
+                  <fa-icon [icon]="icons.faEdit"></fa-icon>
+                </button>
+                <button (click)="onDelete(user)" class="btn btn-danger">
+                  <fa-icon [icon]="icons.faTrash"></fa-icon>
+                </button>
               </div>
             </td>
           </tr>

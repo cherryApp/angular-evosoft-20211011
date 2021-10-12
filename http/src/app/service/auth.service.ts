@@ -32,6 +32,8 @@ export class AuthService {
       const user: User = JSON.parse(this.storage.currentUser);
       this.lastToken = user.accessToken || '';
       this.currentUserSubject$.next(user);
+    } else {
+      this.logout();
     }
   }
 
@@ -56,7 +58,7 @@ export class AuthService {
   logout(): void {
     this.lastToken = '';
     this.currentUserSubject$.next(null);
-    this.storage.currentUser = null;
+    this.storage.removeItem('currentUser');
     this.router.navigate(['/', 'login']);
   }
 }

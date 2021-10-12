@@ -7,6 +7,7 @@
       "email": "diggulden0@senate.gov",
       "address": "5 Village Green Center",
       "active": true,
+      "role": 2,
       "password": "$2a$10$iJzkNQS3A/W3CnPT5iIZvOZBZ9H7sX6mOz6bS36L40ty81p30Yyvi"
     },
     {
@@ -16,6 +17,7 @@
       "email": "ybryer2@free.fr",
       "address": "55834 Jay Parkway",
       "active": true,
+      "role": 1,
       "password": "$2a$10$fnA1fRktZVPKrpenoY6MeO1PmjkH8SUhBGwSnEyVuHAGsvI9eVne."
     },
     {
@@ -497,14 +499,6 @@
       "lastName": "Drew",
       "email": "fdrew2n@google.de",
       "address": "1 Nobel Lane",
-      "active": true
-    },
-    {
-      "id": 97,
-      "firstName": "Bethina",
-      "lastName": "Colum",
-      "email": "bcolum2o@sakura.ne.jp",
-      "address": "861 Vahlen Trail",
       "active": true
     },
     {

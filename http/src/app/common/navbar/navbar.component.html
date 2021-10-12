@@ -7,7 +7,14 @@
     <div class="navbar-nav">
       <a class="nav-link active" routerLink="/">Home <span class="sr-only">(current)</span></a>
       <a class="nav-link" routerLink="/user">Users</a>
-      <a class="nav-link" routerLink="/login">Login</a>
+      <a
+        *ngIf="!(userSubject$ | async)"
+        class="nav-link"
+        routerLink="/login">Login</a>
+      <a
+        *ngIf="(userSubject$ | async)"
+        class="nav-link"
+        (click)="onLogout()">Logout</a>
     </div>
   </div>
 </nav>
