@@ -12,9 +12,12 @@
       <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary btn-block">
         Login
       </button>
-      <p *ngIf="loginForm.invalid && loginForm.controls.email?.touched && loginForm.controls.password?.touched">
+      <div class="alert alert-danger mt-2" *ngIf="loginForm.invalid && loginForm.controls.email?.touched && loginForm.controls.password?.touched">
         Adja meg az emailt és a jelszót is.
-      </p>
+      </div>
+      <div *ngIf="loginError" class="alert alert-danger mt-2">
+        {{ loginError }}
+      </div>
     </form>
   </div>
 </div>

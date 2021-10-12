@@ -6,4 +6,5 @@ export class User {
   password?: string = '';
   address: string = '';
   active: boolean = false;
+  accessToken?: string;
 }

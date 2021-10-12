@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 interface IServerEntity {
   id: number;
@@ -12,7 +13,7 @@ interface IServerEntity {
 })
 export class BaseService<T extends IServerEntity> {
 
-  apiUrl: string = `http://127.0.0.1:3000`;
+  apiUrl: string = environment.apiUrl;
   entityName: string = ``;
 
   list$: BehaviorSubject<T[]> = new BehaviorSubject<T[]>([]);
