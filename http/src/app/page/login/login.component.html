@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-12 col-md-6 offset-md-3 mt-5">
+    <form #loginForm="ngForm" (ngSubmit)="onLogin()">
+      <div class="form-group">
+        <label for="">Email</label>
+        <input required email name="email" [(ngModel)]="loginData.email" type="email" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Password</label>
+        <input required name="password" [(ngModel)]="loginData.password" type="password" class="form-control">
+      </div>
+      <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary btn-block">
+        Login
+      </button>
+      <p *ngIf="loginForm.invalid && loginForm.controls.email?.touched && loginForm.controls.password?.touched">
+        Adja meg az emailt és a jelszót is.
+      </p>
+    </form>
+  </div>
+</div>
