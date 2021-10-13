@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve": "json-server-auth ../server/MOCK_DATA.json -r routes.json"
+    "serve": "json-server-auth ../server/MOCK_DATA.json -r routes.json",
+    "cypress:run": "cypress run"
   },
   "private": true,
   "dependencies": {
@@ -42,6 +43,12 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
-    "typescript": "~4.3.5"
+    "typescript": "~4.3.5",
+    "@cypress/schematic": "^1.5.1",
+    "@ngneat/spectator": "^8.1.0",
+    "cypress": "8.6.0",
+    "jasmine-spec-reporter": "7.0.0",
+    "ng-mocks": "12.5.0",
+    "protractor": "7.0.0"
   }
 }

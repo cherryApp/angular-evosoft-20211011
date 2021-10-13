@@ -1,3 +1,8 @@
-<pre>
-  {{ user$ | async | json }}
-</pre>
+<div class="row">
+  <div *ngIf="user$ | async as user" class="col-6 offset-6">
+    <div class="form-group">
+      <label for=""></label>
+      <input id="email-input" name="email" [(ngModel)]="user.email" class="form-control" type="email">
+    </div>
+  </div>
+</div>
