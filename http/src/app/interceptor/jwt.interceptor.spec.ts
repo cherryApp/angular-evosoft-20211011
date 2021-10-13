@@ -3,11 +3,19 @@ import { AuthService } from '../service/auth.service';
 
 import { JwtInterceptor } from './jwt.interceptor';
 
+
+
 describe('JwtInterceptor', () => {
   beforeEach(() => TestBed.configureTestingModule({
     providers: [
       JwtInterceptor,
-      AuthService,
+      {
+        provide: AuthService,
+        useValue: {
+          login: () => {},
+          logout: () => {},
+        },
+      },
     ],
   }));
 

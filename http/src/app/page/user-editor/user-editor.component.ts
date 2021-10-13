@@ -23,9 +23,6 @@ export class UserEditorComponent implements OnInit {
   // user!: User;
 
   constructor(
-    private userService: UserService,
-    private activatedRoute: ActivatedRoute,
-    private cdr: ChangeDetectorRef,
     @Inject(USER_INFO) readonly user$: Observable<User>,
   ) { }
 

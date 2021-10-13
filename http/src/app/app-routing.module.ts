@@ -8,7 +8,7 @@ import { LoginComponent } from './page/login/login.component';
 import { UserEditorComponent } from './page/user-editor/user-editor.component';
 import { UserComponent } from './page/user/user.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
