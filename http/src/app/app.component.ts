@@ -10,5 +10,5 @@ import { UserService } from './service/user.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-
+  title: string = 'Evosoft Course';
 }
